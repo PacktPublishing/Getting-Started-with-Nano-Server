@@ -6,7 +6,7 @@ Want to improve your ability to deploy a new VM and install and deploy container
 
 
 ## Instructions and Navigation
-All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
+All of the code is organized into folders. Each folder starts with a number followed by the application name. 
 
 The code will look like the following:
 ```
