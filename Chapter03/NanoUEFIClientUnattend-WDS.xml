@@ -1,0 +1,87 @@
+<?xml version=“1.0" encoding=“utf-8"?>
+<unattend xmlns=“urn:schemas-microsoft-com:unattend">
+	<settings pass="windowsPE">
+		<component name=“Microsoft-Windows-Setup" processorArchitecture=“amd64" publicKeyToken="31bf3856ad364e35" language=“neutral" versionScope=“nonSxS" xmlns:wcm=“http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi=“http://www.w3.org/2001/XMLSchema-instance">
+			<DiskConfiguration>
+				<Disk wcm:action=“add">
+					<CreatePartitions>
+						<CreatePartition wcm:action=“add">
+							<Order>1</Order>
+							<Size>100</Size>
+							<Type>EFI</Type>
+						</CreatePartition>
+						<CreatePartition wcm:action=“add">
+							<Order>2</Order>
+							<Size>128</Size>
+							<Type>MSR</Type>
+						</CreatePartition>
+						<CreatePartition wcm:action=“add">
+							<Order>3</Order>
+							<Type>Primary</Type>
+							<Extend>true</Extend>
+						</CreatePartition>
+					</CreatePartitions>
+					<ModifyPartitions>
+						<ModifyPartition wcm:action=“add">
+							<Format>FAT32</Format>
+							<Label>EFI System</Label>
+							<Order>1</Order>
+							<PartitionID>1</PartitionID>
+						</ModifyPartition>
+						<ModifyPartition wcm:action=“add">
+							<Order>2</Order>
+							<PartitionID>2</PartitionID>
+						</ModifyPartition>
+						<ModifyPartition wcm:action=“add">
+							<Format>NTFS</Format>
+							<Label>Windows</Label>
+							<Order>3</Order>
+							<PartitionID>3</PartitionID>
+						</ModifyPartition>
+					</ModifyPartitions>
+					<DiskID>0</DiskID>
+						<WillWipeDisk>true</WillWipeDisk>
+					</Disk>
+			</DiskConfiguration>
+			<EnableFirewall>true</EnableFirewall>
+			<EnableNetwork>true</EnableNetwork>
+			<WindowsDeploymentServices>
+				<Login>
+					<Credentials>
+						<Domain>XXXXXXXX</Domain>
+						<Password>XXXXXXXX</Password>
+						<Username>XXXXXXXX</Username>
+					</Credentials>
+					<WillShowUI>Never</WillShowUI>
+				</Login>
+				<ImageSelection>
+					<InstallImage>
+						<ImageGroup>XXXXXXXX</ImageGroup>
+						<ImageName>XXXXXXXX</ImageName>
+						<Filename>XXXXXXXX</Filename>
+					</InstallImage>
+					<InstallTo>
+						<DiskID>0</DiskID>
+						<PartitionID>3</PartitionID>
+					</InstallTo>
+					<WillShowUI>Never</WillShowUI>
+				</ImageSelection>
+				</WindowsDeploymentServices>
+					<DynamicUpdate>
+						<Enable>true</Enable>
+						<WillShowUI>Never</WillShowUI>
+					</DynamicUpdate>
+		</component>
+		<component name=“Microsoft-Windows-International-Core-WinPE" processorArchitecture=“amd64" publicKeyToken=“31bf3856ad364e35" language=“neutral" versionScope=“nonSxS" xmlns:wcm=“http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi=“http://www.w3.org/2001/XMLSchema- instance">
+		<SetupUILanguage>
+			<WillShowUI>Never</WillShowUI>
+			<UILanguage>en-US</UILanguage>
+		</SetupUILanguage>
+	<InputLocale>en-US</InputLocale>
+	<SystemLocale>en-US</SystemLocale>
+	<UILanguage>en-US</UILanguage>
+	<UILanguageFallback>en-US</UILanguageFallback>
+	<UserLocale>en-US</UserLocale>
+</component>
+</settings>
+<cpi:offlineImage cpi:source=“catalog:c:/ws2016/media/NanoServer/NanoServer_CORESYSTEMSERVER_INSTALL.clg"

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <servicing></servicing>
+    <settings pass="windowsPE">
+        <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <DiskConfiguration>
+                <Disk wcm:action="add">
+                    <CreatePartitions>
+                        <CreatePartition wcm:action="add">
+						    <Size>350</Size>
+                            <Type>Primary</Type>
+                            <Order>1</Order>
+                        </CreatePartition>
+						<CreatePartition wcm:action=“add">
+							<Extend>true</Extend>
+							<Type>Primary</Type>
+							<Order>2</Order>
+						</CreatePartition>
+                    </CreatePartitions>
+					<ModifyPartitions>
+						<ModifyPartition wcm:action=“add">
+                            <Active>true</Active>
+							<Format>NTFS</Format>
+							<Label>Boot</Label>
+							<Order>1</Order>
+							<PartitionID>1</PartitionID>
+						</ModifyPartition>
+						<ModifyPartition wcm:action=“add">
+							<Format>NTFS</Format>
+							<Label>System</Label>
+							<Letter>C</Letter>
+							<PartitionID>2</PartitionID>
+							<Order>2</Order>
+						</ModifyPartition>
+                    </ModifyPartitions>
+                    <DiskID>0</DiskID>
+                    <WillWipeDisk>true</WillWipeDisk>
+                </Disk>
+            </DiskConfiguration>
+            <EnableFirewall>true</EnableFirewall>
+            <EnableNetwork>true</EnableNetwork>
+            <WindowsDeploymentServices>
+                <Login>
+                    <Credentials>
+                        <Domain>XXXXXXXX</Domain>
+                        <Password>XXXXXXXX</Password>
+                        <Username>XXXXXXXX</Username>
+                    </Credentials>
+                    <WillShowUI>Never</WillShowUI>
+                </Login>
+                <ImageSelection>
+                    <InstallImage>
+                        <Filename>XXXXXXXX</Filename>
+                        <ImageGroup>XXXXXXXX</ImageGroup>
+                        <ImageName>XXXXXXXX</ImageName>
+                    </InstallImage>
+                    <WillShowUI>Never</WillShowUI>
+                    <InstallTo>
+                        <DiskID>0</DiskID>
+                        <PartitionID>1</PartitionID>
+                    </InstallTo>
+                </ImageSelection>
+            </WindowsDeploymentServices>
+            <DynamicUpdate>
+                <Enable>true</Enable>
+                <WillShowUI>Never</WillShowUI>
+            </DynamicUpdate>
+        </component>
+        <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SetupUILanguage>
+                <UILanguage>en-US</UILanguage>
+                <WillShowUI>Never</WillShowUI>
+            </SetupUILanguage>
+            <InputLocale>en-US</InputLocale>
+            <SystemLocale>en-US</SystemLocale>
+            <UILanguage>en-US</UILanguage>
+            <UILanguageFallback>en-US</UILanguageFallback>
+            <UserLocale>en-US</UserLocale>
+        </component>
+    </settings>
+    <cpi:offlineImage cpi:source="wim:d:/ws2016/media/sources/install.wim#Windows Server 2016 Technical Preview 4 SERVERDATACENTER" xmlns:cpi="urn:schemas-microsoft-com:cpi" />
+</unattend>
