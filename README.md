@@ -21,6 +21,3 @@ The code will look like the following:
 * [Getting Started with Windows Server Security](https://www.packtpub.com/networking-and-servers/windows-server-security-essentials?utm_source=repository&utm_medium=github&utm_campaign=repository&utm_term=9781784398729)
 
 * [Getting Started with Microsoft Lync Server 2013](https://www.packtpub.com/networking-and-servers/getting-started-microsoft-lync-server-2013?utm_source=repository&utm_medium=github&utm_campaign=repository&utm_term=9781782179931)
-
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions. 
