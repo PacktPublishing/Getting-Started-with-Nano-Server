@@ -21,3 +21,7 @@ The code will look like the following:
 * [Getting Started with Windows Server Security](https://www.packtpub.com/networking-and-servers/windows-server-security-essentials?utm_source=repository&utm_medium=github&utm_campaign=repository&utm_term=9781784398729)
 
 * [Getting Started with Microsoft Lync Server 2013](https://www.packtpub.com/networking-and-servers/getting-started-microsoft-lync-server-2013?utm_source=repository&utm_medium=github&utm_campaign=repository&utm_term=9781782179931)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781782175223">https://packt.link/free-ebook/9781782175223 </a> </p>
